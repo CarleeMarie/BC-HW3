@@ -1,4 +1,4 @@
-/*
+/* Criteria
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
@@ -16,7 +16,7 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 */
 
-/*Steps
+/* Steps
 * 1. click button
 * 2. PROMPTS -> CONFIRM- presented with series of prompts for passwoprd criteria
 *  - PROMPT password length [8-128] chars
@@ -35,15 +35,22 @@ function generatePassword() {
   
   if (passwordLength < 8) {
     alert("Number must be between 8 and 128.");
-    //want to go back to the beginning of the function, so we call it
-  generatePassword();     
-  }
-  else if (passwordLength > 128) {
+    //an answer that doesn't meet the criteria needs to be corrected, so we want to go back to the beginning of the function, so we call it
+    generatePassword();     
+  
+  } else if (passwordLength > 128) {
     alert("Number must be between 8 and 128.");
+    generatePassword(); 
   }
-
+  //end of password length code block
+  //start of character type code block
   var passwordCharacters = prompt("Which character types do you want to include? You can enter: lowercase, uppercase, numbers and special characters. Separate each type of character you list with a comma.")
-  console.log(passwordCharacters);
+    console.log(passwordCharacters);
+  
+    if (passwordCharacters !== "lowercase" || passwordCharacters !== "uppercase" || passwordCharacters !== "numbers" || passwordCharacters !== "special characters") {
+      alert("Please enter from the previous list.");
+      passwordCharacters();
+    } else if (passwordCharacters == "lowercase" && passwordCharacters == "uppercase" && passwordCharacters == "numbers" && passwordCharacters == "special characters") 
 
 
 
