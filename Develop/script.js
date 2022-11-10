@@ -44,14 +44,35 @@ function generatePassword() {
   }
   //end of password length code block
   //start of character type code block
-  var passwordCharacters = prompt("Which character types do you want to include? You can enter: lowercase, uppercase, numbers and special characters. Separate each type of character you list with a comma.")
-    console.log(passwordCharacters);
   
-    if (passwordCharacters !== "lowercase" || passwordCharacters !== "uppercase" || passwordCharacters !== "numbers" || passwordCharacters !== "special characters") {
-      alert("Please enter from the previous list.");
-      passwordCharacters();
-    } else if (passwordCharacters == "lowercase" && passwordCharacters == "uppercase" && passwordCharacters == "numbers" && passwordCharacters == "special characters") 
+  var lowerCase = false, upperCase = false, number = false, special = false;
+  while (lowerCase === false && upperCase === false && number === false && special === false) {
+    // keeping track of whether something has been selected
+    var selected = false;
+    lowerCase = confirm("Do you want to include lowercase letters in your password? Yes or No?");
+  if (lowerCase) {
+    selected = lowerCase;  
+  }
+  
+  upperCase = confirm("Do you want to include uppercase letters in your password? Yes or No?");
+  if (!selected) {
+    selected = upperCase;  
+  }
 
+
+  }
+
+
+//if nothing selected - give a prompt that they have to select one
+//using selected length, create an empty array - use a method to figure out how to pick the values
+//if use string use a split method to randomly select value
+check confirms , pick uppwerCase and push it in to the password
+//random.math
+//once you have all that are required, you need to run it as many times as needede to get the length. you can either get the required characters and then fill the rest with random of one character K#n7IODOSFJ 
+
+//store the selected characters in an array (see methods, maybe .push like we did with planets and then use the .join method to combine all the elements into single array/string that will then be shown to the user)
+    
+    
 
 
 
