@@ -11,4 +11,4 @@
 See the page at this [link](https://carleemarie.github.io/Password-Generator/).
 
 Screenshot of Deployed Page
-![Screenshot of page](./assets/images/Horiseon-Online-Marketing-Management.png)
+![Screenshot of page](./assets/images/screenshot.png)
