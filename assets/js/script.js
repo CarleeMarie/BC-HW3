@@ -16,6 +16,9 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 */
 
+// Comment from grader: 
+// Declare and assign your variables. Use a for loop to pick random characters from your variables. Then produce the result. There are lots of little steps to these three previous steps.
+
 // Assignment code starts here
 
 // Set up variables
@@ -92,6 +95,13 @@ function generatePassword() {
   }
  
   return password;
+
+// Code example to get randomized characters:
+for (var i = 0; i <= passwordLength; i++) {
+  var randomNumber = Math.floor(Math.random() * chars.length);
+  password += chars.substring(randomNumber, randomNumber +1);
+ }
+ // https://dev.to/code_mystery/random-password-generator-using-javascript-6a
 
 
 // Get references to the #generate element
