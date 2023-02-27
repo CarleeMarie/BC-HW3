@@ -49,8 +49,6 @@ function generatePassword() {
       
       
     }
-
-    console.log(passwordLength);
   //end of password length code block
 
   //start of character type code block
@@ -81,17 +79,15 @@ function generatePassword() {
     var selected = false;
   
   var concatValues = [lowerCase, upperCase] 
-
   }
- 
-  return password;
-}
+  
+
 
 // Code example to get randomized characters:
-for (var i = 0; i <= passwordLength; i++) {
-  var randomNumber = Math.floor(Math.random() * chars.length);
-  password += chars.substring(randomNumber, randomNumber +1);
- }
+// for (var i = 0; i <= passwordLength; i++) {
+//   var randomNumber = Math.floor(Math.random() * chars.length);
+//   password += chars.substring(randomNumber, randomNumber +1);
+//  }
  // https://dev.to/code_mystery/random-password-generator-using-javascript-6a
 
 
@@ -109,7 +105,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 // call the function to start the process
-generatePassword();
+// generatePassword();
 
 // This is code from exercise 3.1.10
 // Change the values and operators below to test your algorithm meets all conditions
