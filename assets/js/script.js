@@ -57,31 +57,21 @@ function generatePassword() {
   var lowerCase = confirm("Please select character types you want to include in your password: \n Include lowercase letters? Yes or No?");
     if (lowerCase) {
       selected = lowerCase;
-      } else (!selected) {
-        // ????
-        // what do I use instead of console.log?
-        
-      }
-    
+      } 
+
   var upperCase = confirm("Do you want to include uppercase letters?");
     if (selected) {
     selected = upperCase; 
-    } else {
-
     }
      
   var specialChar = confirm('Do you want to include special characters (ex: $, %, &, etc.)?');
   if (selected) {
     selected = specialChar; 
-  } else {
+  } 
 
-  }
-  
   var number = confirm("Do you want to include numbers?");
   if (selected) {
     selected = number;
-  } else {  
-   
   }
  
   
@@ -95,6 +85,7 @@ function generatePassword() {
   }
  
   return password;
+}
 
 // Code example to get randomized characters:
 for (var i = 0; i <= passwordLength; i++) {
